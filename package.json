@@ -1,0 +1,42 @@
+{
+  "name": "week-number",
+  "version": "1.0.0",
+  "description": "Derive the week number of a month, the week number of a year based on a given date.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm run lint && npm run jest",
+    "lint": "eslint src/. --config .eslintrc.json --ext .ts --fix",
+    "jest": "jest src/. --forceExit --passWithNoTests",
+    "compile": "shx rm -rf dist/ && tsc"
+  },
+  "keywords": [
+    "calender",
+    "weeknumber",
+    "week",
+    "number",
+    "month",
+    "year",
+    "date"
+  ],
+  "author": "thaibalong7@gmail.com",
+  "license": "MIT",
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "ignore": []
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.2",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^7.32.0",
+    "jest": "^27.5.1",
+    "shx": "^0.3.4",
+    "ts-jest": "^27.1.5",
+    "ts-node-dev": "^2.0.0",
+    "tslint": "^5.20.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {}
+}

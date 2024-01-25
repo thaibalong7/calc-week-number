@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "noImplicitAny": true, /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+  }
+}
