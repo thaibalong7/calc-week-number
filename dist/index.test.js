@@ -9,6 +9,18 @@ const testCaseTemplate = (date, expectedResult) => {
     expect(weekOfMonth).toBe(expectedResult.weekOfMonth);
 };
 describe('Week starts with <<Monday>> ', () => {
+    test('28/12/2020 must be in week 53 of 2020, week 5 of 12/2020', () => {
+        testCaseTemplate(new Date(2020, 11, 28), {
+            weekOfYear: 53, year: 2020,
+            weekOfMonth: 5, month: 12
+        });
+    });
+    test('01/01/2021 must be in week 53 of 2020, week 5 of 12/2020', () => {
+        testCaseTemplate(new Date(2021, 0, 1), {
+            weekOfYear: 53, year: 2020,
+            weekOfMonth: 5, month: 12
+        });
+    });
     test('01/01/2023 must be in week 52 of 2022, week 5 of 12/2022', () => {
         testCaseTemplate(new Date(2023, 0, 1), {
             weekOfYear: 52, year: 2022,
@@ -57,3 +69,4 @@ describe('Week starts with <<Sunday>>', () => {
         expect(1 + 2).toBe(3);
     });
 });
+//# sourceMappingURL=index.test.js.map

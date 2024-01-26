@@ -19,3 +19,4 @@ exports.DAY_MAPPER = {
 };
 exports.DEFAULT_WEEK_INDEXED = ['mon', 'tues', 'wed', 'thus', 'fri', 'sat', 'sun'];
 exports.ISO_WEEK_INDEXED = ['sun', 'mon', 'tues', 'wed', 'thus', 'fri', 'sat'];
+//# sourceMappingURL=constants.js.map

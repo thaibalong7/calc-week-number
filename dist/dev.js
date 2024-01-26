@@ -12,3 +12,4 @@ datesToTest.forEach(date => {
     const info = (0, _1.getWeekOfMonth)(inputDate);
     console.log(`Ngày ${inputDate.toISOString()} thuộc tuần thứ ${info.weekOfMonth} trong tháng ${info.month}. Tuần ${info.weekOfYear} của năm ${info.year}`);
 });
+//# sourceMappingURL=dev.js.map

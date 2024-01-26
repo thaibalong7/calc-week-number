@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "CommonJS",
+    "target": "es2018",
+    "module": "commonjs",
     "outDir": "./dist",
     "rootDir": "./src",
-    "noImplicitAny": true, /* Enable error reporting for expressions and declarations with an implied 'any' type. */
-  }
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+  },
+  "exclude": ["test"]
 }
