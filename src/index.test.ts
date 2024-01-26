@@ -1,6 +1,82 @@
-describe('main module', () => {
+import { getWeekOfMonth } from ".";
+import { WeekInfoResult } from "./types";
+
+const testCaseTemplate = (date: Date, expectedResult: WeekInfoResult) => {
+  const { year, weekOfYear, month, weekOfMonth, } = getWeekOfMonth(date);
+
+  expect(year).toBe(expectedResult.year);
+  expect(weekOfYear).toBe(expectedResult.weekOfYear);
+  expect(month).toBe(expectedResult.month);
+  expect(weekOfMonth).toBe(expectedResult.weekOfMonth);
+}
+
+describe('Week starts with <<Monday>> ', () => {
+  test('01/01/2023 must be in week 52 of 2022, week 5 of 12/2022', () => {
+    testCaseTemplate(new Date(2023, 0, 1),
+      {
+        weekOfYear: 52, year: 2022,
+        weekOfMonth: 5, month: 12
+      }
+    );
+  });
+
+  test('02/01/2023 must be in week 1 of 2023, week 1 of 01/2023', () => {
+    testCaseTemplate(new Date(2023, 0, 2),
+      {
+        weekOfYear: 1, year: 2023,
+        weekOfMonth: 1, month: 1
+      }
+    );
+  });
+
+  test('15/01/2023 must be in week 2 of 2023, week 2 of 01/2023', () => {
+    testCaseTemplate(new Date(2023, 0, 15),
+      {
+        weekOfYear: 2, year: 2023,
+        weekOfMonth: 2, month: 1
+      }
+    );
+  });
+
+  test('31/05/2023 must be in week 22 of 2023, week 1 of 06/2023', () => {
+    testCaseTemplate(new Date(2023, 4, 31),
+      {
+        weekOfYear: 22, year: 2023,
+        weekOfMonth: 1, month: 6
+      }
+    );
+  });
+
+  test('04/06/2023 must be in week 22 of 2023, week 1 of 06/2023', () => {
+    testCaseTemplate(new Date(2023, 5, 4),
+      {
+        weekOfYear: 22, year: 2023,
+        weekOfMonth: 1, month: 6
+      }
+    );
+  });
+
+  test('31/12/2023 must be in week 52 of 2023, week 4 of 12/2023', () => {
+    testCaseTemplate(new Date(2023, 11, 31),
+      {
+        weekOfYear: 52, year: 2023,
+        weekOfMonth: 4, month: 12
+      }
+    );
+  });
+
+  test('01/01/2024 must be in week 1 of 2024, week 1 of 1/2024', () => {
+    testCaseTemplate(new Date(2024, 0, 1),
+      {
+        weekOfYear: 1, year: 2024,
+        weekOfMonth: 1, month: 1
+      }
+    );
+  });
+});
+
+describe('Week starts with <<Sunday>>', () => {
   test('adds 1 + 2 to equal 3', () => {
     expect(1 + 2).toBe(3);
   });
 });
-
