@@ -1,8 +1,8 @@
-import { getWeekOfMonth } from '../src';
+import { getWeekNumber } from '../src';
 import { WeekInfoResult } from '../src/types';
 
 const testCaseTemplate = (date: Date, expectedResult: WeekInfoResult) => {
-  const { year, weekOfYear, month, weekOfMonth, } = getWeekOfMonth(date);
+  const { year, weekOfYear, month, weekOfMonth, } = getWeekNumber(date);
 
   expect(year).toBe(expectedResult.year);
   expect(weekOfYear).toBe(expectedResult.weekOfYear);

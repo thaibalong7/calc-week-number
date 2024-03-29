@@ -1,9 +1,8 @@
-import { getWeekOfMonth } from "../src";
-import { ISO_WEEK_INDEXED } from "../src/constants";
+import { getIsoWeekNumber } from "../src";
 import { WeekInfoResult } from "../src/types";
 
 const testCaseTemplate = (date: Date, expectedResult: WeekInfoResult) => {
-  const { year, weekOfYear, month, weekOfMonth, } = getWeekOfMonth(date, ISO_WEEK_INDEXED);
+  const { year, weekOfYear, month, weekOfMonth, } = getIsoWeekNumber(date);
 
   expect(year).toBe(expectedResult.year);
   expect(weekOfYear).toBe(expectedResult.weekOfYear);
