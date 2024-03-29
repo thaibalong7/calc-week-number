@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run lint && npm run jest",
     "lint": "eslint src/. --config .eslintrc.json --ext .ts --fix",
-    "jest": "jest src/. --forceExit --passWithNoTests",
+    "jest": "jest test/. --collectCoverage --forceExit",
     "compile": "shx rm -rf dist/ && tsc",
     "dev": "ts-node-dev src/dev.ts"
   },

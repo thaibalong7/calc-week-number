@@ -1,5 +1,5 @@
-import { getWeekOfMonth } from ".";
-import { WeekInfoResult } from "./types";
+import { getWeekOfMonth } from '../src';
+import { WeekInfoResult } from '../src/types';
 
 const testCaseTemplate = (date: Date, expectedResult: WeekInfoResult) => {
   const { year, weekOfYear, month, weekOfMonth, } = getWeekOfMonth(date);
@@ -10,7 +10,7 @@ const testCaseTemplate = (date: Date, expectedResult: WeekInfoResult) => {
   expect(weekOfMonth).toBe(expectedResult.weekOfMonth);
 }
 
-describe('Week starts with <<Monday>> ', () => {
+describe('Week start with <<Monday>> ', () => {
   test('28/12/2020 must be in week 53 of 2020, week 5 of 12/2020', () => {
     testCaseTemplate(new Date(2020, 11, 28),
       {
@@ -91,10 +91,41 @@ describe('Week starts with <<Monday>> ', () => {
       }
     );
   });
-});
 
-describe('Week starts with <<Sunday>>', () => {
-  test('adds 1 + 2 to equal 3', () => {
-    expect(1 + 2).toBe(3);
+  test('01/12/2024 must be in week 48 of 2024, week 5 of 11/2024', () => {
+    testCaseTemplate(new Date(2024, 11, 1),
+      {
+        weekOfYear: 48, year: 2024,
+        weekOfMonth: 4, month: 11
+      }
+    );
+  });
+
+  test('30/06/2025 must be in week 27 of 2025, week 1 of 7/2025', () => {
+    testCaseTemplate(new Date(2025, 5, 30),
+      {
+        weekOfYear: 27, year: 2025,
+        weekOfMonth: 1, month: 7
+      }
+    );
+  });
+
+  test('03/08/2025 must be in week 31 of 2025, week 5 of 7/2025', () => {
+    testCaseTemplate(new Date(2025, 7, 3),
+      {
+        weekOfYear: 31, year: 2025,
+        weekOfMonth: 5, month: 7
+      }
+    );
+  });
+
+  test('01/11/2025 must be in week 44 of 2025, week 5 of 10/2025', () => {
+    testCaseTemplate(new Date(2025, 10, 1),
+      {
+        weekOfYear: 44, year: 2025,
+        weekOfMonth: 5, month: 10
+      }
+    );
   });
 });
+

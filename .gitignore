@@ -1,4 +1,8 @@
+// vs code file
+.vscode/*
+
 *.log
 .nyc_output
 node_modules/
 .env
+coverage/*
