@@ -17,5 +17,5 @@ export const DAY_MAPPER: DayMapper = {
   6: 'sat',
 }
 
-export const DEFAULT_WEEK_INDEXED: WeekIndexed = /**/['mon', 'tues', 'wed', 'thus', 'fri', 'sat', 'sun'];
-export const ISO_WEEK_INDEXED: WeekIndexed = /*---*/['sun', 'mon', 'tues', 'wed', 'thus', 'fri', 'sat'];
+export const ISO_WEEK_INDEXED: WeekIndexed = /*-----*/['mon', 'tues', 'wed', 'thus', 'fri', 'sat', 'sun'];
+export const SUNDAY_WEEK_INDEXED: WeekIndexed = /*--*/['sun', 'mon', 'tues', 'wed', 'thus', 'fri', 'sat'];

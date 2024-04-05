@@ -1,7 +1,7 @@
-import { DAY_MAPPER, DEFAULT_WEEK_INDEXED, ISO_WEEK_INDEXED } from "./constants";
+import { DAY_MAPPER, ISO_WEEK_INDEXED, SUNDAY_WEEK_INDEXED } from "./constants";
 import { IndexOfDayInWeek, WeekIndexed, WeekInfoResult } from "./types";
 
-export function diffWeekOfTwoDate(date1: Date, date2: Date, weekIndexed: WeekIndexed = DEFAULT_WEEK_INDEXED) {
+export function diffWeekOfTwoDate(date1: Date, date2: Date, weekIndexed: WeekIndexed = ISO_WEEK_INDEXED) {
   const weekIndexOfDate2 = weekIndexed.findIndex((v) => v === DAY_MAPPER[<IndexOfDayInWeek>date2.getDay()]);
 
   return 1 + Math.trunc((
@@ -9,7 +9,7 @@ export function diffWeekOfTwoDate(date1: Date, date2: Date, weekIndexed: WeekInd
   ) / 7);
 }
 
-const getWeekNumberGenerator = (weekIndexed: WeekIndexed = DEFAULT_WEEK_INDEXED) => (date: Date): WeekInfoResult => {
+const getWeekNumberGenerator = (weekIndexed: WeekIndexed = ISO_WEEK_INDEXED) => (date: Date): WeekInfoResult => {
   const fDate = new Date(
     Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
   );
@@ -33,5 +33,16 @@ const getWeekNumberGenerator = (weekIndexed: WeekIndexed = DEFAULT_WEEK_INDEXED)
   }
 }
 
+/**
+ * For the week start with `Monday` ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)), return week number of given date
+ * @param {Date} date
+ * @returns {WeekInfoResult}
+ */
 export const getWeekNumber = getWeekNumberGenerator();
-export const getIsoWeekNumber = getWeekNumberGenerator(ISO_WEEK_INDEXED);
+
+/**
+ * For the week start with `Sunday`, return week number of given date
+ * @param {Date} date
+ * @returns {WeekInfoResult}
+ */
+export const getSunWeekNumber = getWeekNumberGenerator(SUNDAY_WEEK_INDEXED);
