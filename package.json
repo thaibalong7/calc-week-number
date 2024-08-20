@@ -19,7 +19,10 @@
     "year",
     "date"
   ],
-  "author": "thaibalong7@gmail.com",
+  "author": {
+    "name": "Thai Ba Long",
+    "email": "thaibalong7@gmail.com"
+  },
   "license": "MIT",
   "standard": {
     "env": [
@@ -39,5 +42,12 @@
     "tslint": "^5.20.1",
     "typescript": "^4.9.3"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thaibalong7/week-number"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
