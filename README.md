@@ -1,6 +1,6 @@
 # Week Number
 
-[![Build Status](https://travis-ci.org/thaibalong7/week-number.svg?branch=master)](https://travis-ci.org/thaibalong7/week-number)
+[![install size](https://packagephobia.com/badge?p=calc-week-number)](https://packagephobia.com/result?p=calc-week-number)
 
 Gets information about the **week number** of a given date. This information includes the year and month of the week, the **week number of the year**, and the **week number of the month**. 
 
