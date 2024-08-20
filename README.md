@@ -24,12 +24,12 @@ To know which year or month a week belongs to, we have the following rule: 1 wee
 You can install it by running:
 
 ```sh
-npm install week-number
+npm install calc-week-number
 ```
 
 or using `yarn`:
 ```sh
-yarn add week-number
+yarn add calc-week-number
 ```
 
 ## Usage
