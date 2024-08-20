@@ -1,5 +1,5 @@
 {
-  "name": "week-number",
+  "name": "calc-week-number",
   "version": "1.0.0",
   "description": "Derive the week number of a month, the week number of a year based on a given date.",
   "main": "dist/index.js",
@@ -19,10 +19,7 @@
     "year",
     "date"
   ],
-  "author": {
-    "name": "Thai Ba Long",
-    "email": "thaibalong7@gmail.com"
-  },
+  "author": "Thai Ba Long <thaibalong7@gmail.com>",
   "license": "MIT",
   "standard": {
     "env": [
@@ -45,9 +42,10 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/thaibalong7/week-number"
+    "url": "github.com/thaibalong7/week-number.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  "bugs": {
+    "url": "https://github.com/thaibalong7/week-number/issues"
+  },
+  "homepage": "https://github.com/thaibalong7/week-number"
 }
