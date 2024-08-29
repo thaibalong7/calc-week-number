@@ -1,6 +1,6 @@
 {
   "name": "calc-week-number",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Derive the week number of a month, the week number of a year based on a given date.",
   "main": "dist/index.js",
   "scripts": {
