@@ -7,7 +7,7 @@
   "scripts": {
     "test": "npm run lint && npm run jest",
     "lint": "eslint src/. --config .eslintrc.json --ext .ts --fix",
-    "jest": "jest test/. --collectCoverage --forceExit",
+    "jest": "jest test/. --coverage && coveralls < coverage/lcov.info",
     "compile": "shx rm -rf dist/ && tsc",
     "dev": "ts-node-dev src/dev.ts"
   },
@@ -32,6 +32,7 @@
     "@types/jest": "^27.5.2",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
+    "coveralls-next": "^4.2.1",
     "eslint": "^7.32.0",
     "jest": "^27.5.1",
     "shx": "^0.3.4",

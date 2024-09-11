@@ -1,6 +1,7 @@
 # Week Number
 
 [![install size](https://packagephobia.com/badge?p=calc-week-number)](https://packagephobia.com/result?p=calc-week-number)
+[![Coverage Status](https://coveralls.io/repos/github/thaibalong7/calc-week-number/badge.svg?branch=master)](https://coveralls.io/github/thaibalong7/calc-week-number?branch=master)
 
 Gets information about the **week number** of a given date. This information includes the year and month of the week, the **week number of the year**, and the **week number of the month**. 
 
