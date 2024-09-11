@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ISO_WEEK_INDEXED = exports.DEFAULT_WEEK_INDEXED = exports.DAY_MAPPER = void 0;
+exports.SUNDAY_WEEK_INDEXED = exports.ISO_WEEK_INDEXED = exports.DAY_MAPPER = void 0;
 exports.DAY_MAPPER = {
     'mon': 1,
     'tues': 2,
@@ -17,6 +17,5 @@ exports.DAY_MAPPER = {
     5: 'fri',
     6: 'sat',
 };
-exports.DEFAULT_WEEK_INDEXED = ['mon', 'tues', 'wed', 'thus', 'fri', 'sat', 'sun'];
-exports.ISO_WEEK_INDEXED = ['sun', 'mon', 'tues', 'wed', 'thus', 'fri', 'sat'];
-//# sourceMappingURL=constants.js.map
+exports.ISO_WEEK_INDEXED = ['mon', 'tues', 'wed', 'thus', 'fri', 'sat', 'sun'];
+exports.SUNDAY_WEEK_INDEXED = ['sun', 'mon', 'tues', 'wed', 'thus', 'fri', 'sat'];

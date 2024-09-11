@@ -1,15 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _1 = require(".");
+var index_1 = require("./index");
 // Sử dụng hàm với một số ngày
-const datesToTest = [
-    "2023-01-01",
+var datesToTest = [
+    "2024-12-01",
     // "2023-06-04",
     // "2024-01-04",
 ];
-datesToTest.forEach(date => {
-    const inputDate = new Date(date);
-    const info = (0, _1.getWeekOfMonth)(inputDate);
-    console.log(`Ngày ${inputDate.toISOString()} thuộc tuần thứ ${info.weekOfMonth} trong tháng ${info.month}. Tuần ${info.weekOfYear} của năm ${info.year}`);
+datesToTest.forEach(function (date) {
+    var inputDate = new Date(date);
+    var info = (0, index_1.getWeekNumber)(inputDate);
+    console.log(info);
+    console.log("Ng\u00E0y ".concat(inputDate.toISOString(), " thu\u1ED9c tu\u1EA7n th\u1EE9 ").concat(info.weekOfMonth, " trong th\u00E1ng ").concat(info.month, ". Tu\u1EA7n ").concat(info.weekOfYear, " c\u1EE7a n\u0103m ").concat(info.year));
 });
-//# sourceMappingURL=dev.js.map
