@@ -1,4 +1,4 @@
-# Week Number
+# Calculate Week Number
 
 [![install size](https://packagephobia.com/badge?p=calc-week-number)](https://packagephobia.com/result?p=calc-week-number)
 [![Coverage Status](https://coveralls.io/repos/github/thaibalong7/calc-week-number/badge.svg?branch=master)](https://coveralls.io/github/thaibalong7/calc-week-number?branch=master)
@@ -38,13 +38,15 @@ yarn add calc-week-number
 ## Usage
 
 ```javascript
-import { getWeekNumber, getSunWeekNumber } from 'week-number';
+import { getWeekNumber, getSunWeekNumber } from 'calc-week-number';
 
 // For the week start with `Monday` (ISO-8601), get information for the week to which 2024/01/01 belongs 
-getWeekNumber(new Date(2024, 0, 1)); // { "month": 1, "weekOfMonth": 1, "year": 2024, "weekOfYear": 1 }
+getWeekNumber(new Date(2024, 0, 1)); 
+// { "month": 1, "weekOfMonth": 1, "year": 2024, "weekOfYear": 1 }
 
 // For the week start with `Sunday`, get information for the week to which 2024/12/01 belongs  
-getSunWeekNumber(new Date(2024, 11, 1)); // { "month": 11, "weekOfMonth": 4, "year": 2024, "weekOfYear": 48 }
+getSunWeekNumber(new Date(2024, 11, 1)); 
+// { "month": 11, "weekOfMonth": 4, "year": 2024, "weekOfYear": 48 }
 ```
 
 ## API
@@ -77,4 +79,4 @@ For the week start with **`Sunday`**, return week number info of given date.
 
 ## Contributing
 
-Please contribute! [Look at the issues](https://github.com/thaibalong7/week-number/issues).
+Please contribute! [Look at the issues](https://github.com/thaibalong7/calc-week-number/issues).

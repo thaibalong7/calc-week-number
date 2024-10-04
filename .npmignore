@@ -6,12 +6,12 @@
 .npm-debug.log
 .editorconfig
 .eslintrc.json
+.coveralls.yml
 jest.config.js
-tsconfig.json
+tsconfig.*
 
 .vscode/*
 coverage/*
 test/*
 src/*
-dist/dev.d.ts
-dist/dev.js
+scripts/*
